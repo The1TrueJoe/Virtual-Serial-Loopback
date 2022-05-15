@@ -12,7 +12,12 @@ else:
     port = str(sys.argv[1])
 
 # Connect to our virtual port
-serial_terminal = serial.Serial(port, 115200, timeout=.1)
+try:
+    serial_terminal = serial.Serial(port, 115200, timeout=.1)
+    print("Connected")
+
+except:
+    print("Could not connect to " + port)
 
 # Send messages to the port
 try:
