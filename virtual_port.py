@@ -29,7 +29,7 @@ def run():
 
         # Print data
         if data != None:
-            print(data.decode())
+            print(data)
 
 # Main
 def main():
